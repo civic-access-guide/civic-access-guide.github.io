@@ -1433,10 +1433,12 @@ function agencyDiagram(text) {
     <figure class="agency-diagram" aria-label="${v.title}">
       <figcaption>${v.title}</figcaption>
       <div class="route-grid" aria-hidden="true">
-        <span class="route-line route-line-a"></span>
-        <span class="route-line route-line-b"></span>
-        <span class="route-line route-line-c"></span>
-        <span class="route-line route-line-d"></span>
+        <svg class="route-connectors" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <line x1="50" y1="50" x2="24" y2="22"></line>
+          <line x1="50" y1="50" x2="76" y2="22"></line>
+          <line x1="50" y1="50" x2="24" y2="76"></line>
+          <line x1="50" y1="50" x2="76" y2="76"></line>
+        </svg>
         <strong class="route-node route-center">${v.center}</strong>
         <strong class="route-node route-a">${v.works}</strong>
         <strong class="route-node route-b">${v.sheriff}</strong>
